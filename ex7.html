@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 07</title>
+</head>
+<body>
+    <h1>Título da Página</h1>
+    <p>Primeiro parágrafo</p>
+    <p class="exemplo">Classe exemplo</p>
+    <p id="exemplo">ID Exemplo</p>
+
+    <input type="text" id="query" placeholder="Digite um elemento" onblur="pegarElemento()">
+
+    <script>
+        pegarElemento = function() {
+            var query = document.querySelector("#query").value;
+            if ( query == "" ) {
+                alert("Digite um valor");
+            } else {
+                if ( document.querySelector(query) == null ) {
+                    alert("Elemento não existe")
+                } else {
+                    var elemento = document.querySelector(query).innerHTML;
+                    alert(elemento);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
